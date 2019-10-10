@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  
+
+  
+  <title>给小米MIX2刷lineage os与错误7解决 | RunianLee&#39;s Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="序之前一直用着Sony Z3，只可惜手机在放学路上掉了，就去捡了个Moto G 2014，骁龙400是真的卡，从801降到400用了一年多，狠了狠心这次买了个MIX2乞丐版，只要不丢了应该可以陪我到高中毕业了_(:3 」∠ )_ 小米刷机不如Moto方便倒是真的，中途还麻烦了同学，一路折腾下来一个晚上算是搞定了，写写自己遇到了哪些坑 系统的选择小米的刷机包一直很多，老牌简洁的Lineage OS，">
+<meta name="keywords" content="Android,LineageOS">
+<meta property="og:type" content="article">
+<meta property="og:title" content="给小米MIX2刷lineage os与错误7解决">
+<meta property="og:url" content="https://RunianLee.github.io/2019/02/14/lineage-os-15-on-mix2/index.html">
+<meta property="og:site_name" content="RunianLee&#39;s Blog">
+<meta property="og:description" content="序之前一直用着Sony Z3，只可惜手机在放学路上掉了，就去捡了个Moto G 2014，骁龙400是真的卡，从801降到400用了一年多，狠了狠心这次买了个MIX2乞丐版，只要不丢了应该可以陪我到高中毕业了_(:3 」∠ )_ 小米刷机不如Moto方便倒是真的，中途还麻烦了同学，一路折腾下来一个晚上算是搞定了，写写自己遇到了哪些坑 系统的选择小米的刷机包一直很多，老牌简洁的Lineage OS，">
+<meta property="og:locale" content="en">
+<meta property="og:image" content="https://runianlee.github.io/2019/02/14/lineage-os-15-on-mix2/a.jpg">
+<meta property="og:image" content="https://runianlee.github.io/2019/02/14/lineage-os-15-on-mix2/001.jpeg">
+<meta property="og:image" content="https://runianlee.github.io/2019/02/14/lineage-os-15-on-mix2/b1.jpeg">
+<meta property="og:image" content="https://runianlee.github.io/2019/02/14/lineage-os-15-on-mix2/b2.jpeg">
+<meta property="og:image" content="https://runianlee.github.io/2019/02/14/lineage-os-15-on-mix2/b3.jpeg">
+<meta property="og:image" content="https://runianlee.github.io/2019/02/14/lineage-os-15-on-mix2/002.jpeg">
+<meta property="og:image" content="https://runianlee.github.io/2019/02/14/lineage-os-15-on-mix2/003.jpeg">
+<meta property="og:updated_time" content="2019-10-10T13:43:11.264Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="给小米MIX2刷lineage os与错误7解决">
+<meta name="twitter:description" content="序之前一直用着Sony Z3，只可惜手机在放学路上掉了，就去捡了个Moto G 2014，骁龙400是真的卡，从801降到400用了一年多，狠了狠心这次买了个MIX2乞丐版，只要不丢了应该可以陪我到高中毕业了_(:3 」∠ )_ 小米刷机不如Moto方便倒是真的，中途还麻烦了同学，一路折腾下来一个晚上算是搞定了，写写自己遇到了哪些坑 系统的选择小米的刷机包一直很多，老牌简洁的Lineage OS，">
+<meta name="twitter:image" content="https://runianlee.github.io/2019/02/14/lineage-os-15-on-mix2/a.jpg">
+  
+    <link rel="alternate" href="/atom.xml" title="RunianLee&#39;s Blog" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+</html>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">RunianLee&#39;s Blog</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://RunianLee.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-lineage-os-15-on-mix2" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/02/14/lineage-os-15-on-mix2/" class="article-date">
+  <time datetime="2019-02-14T12:25:14.000Z" itemprop="datePublished">2019-02-14</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      给小米MIX2刷lineage os与错误7解决
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="序"><a href="#序" class="headerlink" title="序"></a>序</h3><p>之前一直用着Sony Z3，只可惜手机在放学路上掉了，就去捡了个Moto G 2014，骁龙400是真的卡，从801降到400用了一年多，狠了狠心这次买了个MIX2乞丐版，只要不丢了应该可以陪我到高中毕业了_(:3 」∠ )_</p>
+<p>小米刷机不如Moto方便倒是真的，中途还麻烦了同学，一路折腾下来一个晚上算是搞定了，写写自己遇到了哪些坑</p>
+<h3 id="系统的选择"><a href="#系统的选择" class="headerlink" title="系统的选择"></a>系统的选择</h3><p>小米的刷机包一直很多，老牌简洁的Lineage OS，更接近原生的PE还有些我没见过的Omni，看了一圈下来选择了我用的最多而且有官方(Official)支持的Lineage OS，有什么问题更新起来也方便，求稳喵<br>官网下好TWRP，Lineage OS，OpenGAPPS，Magisk包，插好数据线一把梭之后傻眼了，小米要解锁<br><img src="/2019/02/14/lineage-os-15-on-mix2/a.jpg" alt><br>好在有个米粉同学，丢给他解了个锁，我们继续</p>
+<h3 id="刷机"><a href="#刷机" class="headerlink" title="刷机"></a>刷机</h3><p>首先测试下twrp有没有什么问题，先进入fastboot<br><code>fastboot boot twrp.img</code><br>测试没什么问题后<br><code>fastboot flash recovery twrp.img</code><br>进recovery双清选择刷机包，滑动开始！<br>然后就。。。翻车了<br>错误7(Error 7)<br><img src="/2019/02/14/lineage-os-15-on-mix2/001.jpeg" alt><br>再来一次，还是这样<br><img src="/2019/02/14/lineage-os-15-on-mix2/b1.jpeg" alt><br>然后开始找错，根据经验用twrp格式化一遍data和system之类的再试试，还是不行，于是就要依靠万能的搜索引擎了<br>有人说是底包问题，要换最新的底包。马上去MIUI官网下了个最新的开发版刷上再试一次，还是失败。<br>找了半天问题还是没解决，问题出在xiaomi.verify_trustzone上，有人说直接删了这行就能刷上了，可是，这不优雅<br><img src="/2019/02/14/lineage-os-15-on-mix2/b2.jpeg" alt><br>肯定有什么更优雅的方法解决的，lineage官网没有做特殊说明，更气的是，下了个魔趣刷上直接就开机了<br><img src="/2019/02/14/lineage-os-15-on-mix2/b3.jpeg" alt><br>去xda挨个帖子翻过去，看了看原帖<br><img src="/2019/02/14/lineage-os-15-on-mix2/002.jpeg" alt="002"><br>左看右看也没看出个啥来，这是出比有蹊跷。无意之中扫到一行文字<br><img src="/2019/02/14/lineage-os-15-on-mix2/003.jpeg" alt="003"><br>原帖要求我们的rom竟然是MIUI 8.4.19，这都9102年了，半年时间MIUI都出到11了，这玩意还能用吗<br>不知道从哪想出来个想法，别人都是底包版本过低，我是不是版本太高了。<br>借助搜索引擎，我找到了都快发霉的8.4.19的包<br><a href="http://bigota.d.miui.com/8.4.19/miui_MIMIX2Global_8.4.19_fa49b224" target="_blank" rel="noopener">miui_MIMIX2Global_8.4.19_fa49b22402_8.0.zip</a><br><code>SHA-1: 7ca74a5d7caac7b64429376742dfe320c202a783</code><br>下载地址写在上面，需要的自提<br>刷完这个包双清，再刷lineage os，顺利开机<br>剩下的就是装软件配框架什么的了，这次也算是蛮奇妙的一次体验，大部分人可能碰不到这么特殊的情况，写出来帮助一下跟我遇到同样问题的人</p>
+<p>各位，新年快乐呢喵～</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://RunianLee.github.io/2019/02/14/lineage-os-15-on-mix2/" data-id="ck1ks00a600012ts6jc1fwtuq" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Android/">Android</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/LineageOS/">LineageOS</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2019/02/26/Chinese-character-with-CJK-font/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          “复”字变窄了？谈谈字体的那点事
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2018/01/01/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Hello World</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Android/">Android</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/LineageOS/">LineageOS</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/Android/" style="font-size: 20px;">Android</a> <a href="/tags/LineageOS/" style="font-size: 10px;">LineageOS</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/10/">October 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/02/">February 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/">January 2018</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2019/10/10/lineage-os-15-to-16/">lineageos跨版本升级踩坑记录</a>
+          </li>
+        
+          <li>
+            <a href="/2019/02/26/Chinese-character-with-CJK-font/">“复”字变窄了？谈谈字体的那点事</a>
+          </li>
+        
+          <li>
+            <a href="/2019/02/14/lineage-os-15-on-mix2/">给小米MIX2刷lineage os与错误7解决</a>
+          </li>
+        
+          <li>
+            <a href="/2018/01/01/hello-world/">Hello World</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2019 Runian Lee<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>

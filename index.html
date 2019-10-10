@@ -62,10 +62,10 @@
       <div class="outer">
         <section id="main">
   
-    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-lineage-os-15-to-16" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2019/10/10/hello-world/" class="article-date">
-  <time datetime="2019-10-10T11:13:58.784Z" itemprop="datePublished">2019-10-10</time>
+    <a href="/2019/10/10/lineage-os-15-to-16/" class="article-date">
+  <time datetime="2019-10-10T13:48:58.000Z" itemprop="datePublished">2019-10-10</time>
 </a>
     
   </div>
@@ -76,7 +76,142 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2019/10/10/hello-world/">Hello World</a>
+      <a class="article-title" href="/2019/10/10/lineage-os-15-to-16/">lineageos跨版本升级踩坑记录</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>过年的时候给手机升级了lineage 15之后就再也没升级过，结果到了中秋节lineage已经更新到16了_(:3 」∠ )_<br>系统自带的ota升级工具是没法进行跨版本升级的，而我又不想丢数据。。。就来尝试一下进行跨版本升级</p>
+<p>首先去lineage官网下载最新的安装包，放在/sdcard中，进入TRWP刷入。_(:3 」∠ )_<br><img src="/2019/10/10/lineage-os-15-to-16/twrp.jpg" alt></p>
+<p>然后就得到了熟悉的错误7，翻译一下发现是底包版本过低，毕竟之前为了刷los 15刷了一个很老很老的miui，可是重新刷miui会丢数据，而我又没有地方备份，那有没有什么办法可以直接升级底包呢</p>
+<p>查找一番之后找到了这个网站：xiaomi firmware updater 这个网站，里面就是各种小米手机的底包，每个只有几十mb<br><img src="/2019/10/10/lineage-os-15-to-16/mi.jpg" alt><br>下载我需要的底包，刷入，然后成功刷入最新版的los 16</p>
+<p>开机之后出现了谷歌服务已停止运行的弹窗，而且不停的不停的弹(つд⊂)</p>
+<p>研究了一下发现原来谷歌服务框架每个安卓版本都不一样，去opengapps重新下了一份谷歌服务框架，刷机，开机就完成了～</p>
+<p>比预计的顺利了很多呢(≧∀≦)</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://RunianLee.github.io/2019/10/10/lineage-os-15-to-16/" data-id="ck1ks00ao00042ts6b8ndm2j5" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Android/">Android</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/LineageOS/">LineageOS</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-Chinese-character-with-CJK-font" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/02/26/Chinese-character-with-CJK-font/" class="article-date">
+  <time datetime="2019-02-26T13:36:09.000Z" itemprop="datePublished">2019-02-26</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/02/26/Chinese-character-with-CJK-font/">“复”字变窄了？谈谈字体的那点事</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>上次刷机完成之后遇到了点奇怪的问题，那就是一些汉字显示出现了问题。<br><img src="/2019/02/26/Chinese-character-with-CJK-font/1.jpg" alt><br>“复”字就像刚减肥回来一样，整个字窄了一半。虽说看着没啥影响，但就是难受。在网上也没找到类似的问题，老师教育我们“多从自己身上找问题”，Lineage OS这么成熟的系统不可能出现这么严重的问题，去群里问了下大佬们，问题瞬间解决，原因是没在语言中添加汉语，在语言列表中添加了汉语问题就解决了，这是这到底是为什么？</p>
+<p>先去查阅问维基百科可以得知，Android系统使用的默认字体是Roboto，比如汉语、日语、韩语等不支持的语言，使用的字体则为Noto。</p>
+<p>Noto的意思是No Tofu，没有豆腐块，在一部分系统中不被支持的文字会被显示为豆腐块。这个字体也被Adobe叫做思源系列字体，也就是著名思源黑体／宋体系列。可是这一切跟文字显示“异常”有什么原因，先别着急。</p>
+<p><img src="/2019/02/26/Chinese-character-with-CJK-font/2.jpeg" alt></p>
+<p>先来看看这几句诗，乍一看是不是没什么问题，再仔细看看<br><img src="/2019/02/26/Chinese-character-with-CJK-font/3.jpeg" alt><br>这跟学过的汉字相差有点远，可是为什么添加了简体中文之后显示就正常了，这就得说到CJK字体了。</p>
+<p>CJK一般是中日韩统一表意文字的简称，在常见的万国码（Unicode）中为了节约空间，将中国日本韩国等使用汉字的国家的汉字统一到了一起，也就是说比如“门”这个同时出现在日语和汉语中的文字对计算机而言是同一个文字</p>
+<p>回到正题，Android系统的默认字体是思源黑体，而思源黑体针对各个国家推出了自己的版本，而默认的思源黑体则没有说明语言，我们把各个语言进行对比，结果十分明了<br><img src="/2019/02/26/Chinese-character-with-CJK-font/4.jpeg" alt><br>在默认的Source Han Serif中四个汉字在汉语中显示错误，日语中没有“归”字但剩下的三个字跟我们得到的结果一样；韩语中“归”字显示错误。</p>
+<p>我们可以推测到：思源宋体默认语言的情况下，会先从日语中寻找这个汉字，日语中没有再去韩语中寻找，最后才来到汉语，因为这个顺序，导致了我们系统在没有添加汉语的情况下部分汉字显示出错。</p>
+<p>解决方案也很简单，开头就说过，添加了中文就好了。<br>这个问题在晚上搜索到的结果不多，似乎也没什么人提，看到一部分酷友的截图中出现了类似的情况，在这里写出来给大家分享。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://RunianLee.github.io/2019/02/26/Chinese-character-with-CJK-font/" data-id="ck1ks009s00002ts6ps7c2wao" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Android/">Android</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-lineage-os-15-on-mix2" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/02/14/lineage-os-15-on-mix2/" class="article-date">
+  <time datetime="2019-02-14T12:25:14.000Z" itemprop="datePublished">2019-02-14</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/02/14/lineage-os-15-on-mix2/">给小米MIX2刷lineage os与错误7解决</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="序"><a href="#序" class="headerlink" title="序"></a>序</h3><p>之前一直用着Sony Z3，只可惜手机在放学路上掉了，就去捡了个Moto G 2014，骁龙400是真的卡，从801降到400用了一年多，狠了狠心这次买了个MIX2乞丐版，只要不丢了应该可以陪我到高中毕业了_(:3 」∠ )_</p>
+<p>小米刷机不如Moto方便倒是真的，中途还麻烦了同学，一路折腾下来一个晚上算是搞定了，写写自己遇到了哪些坑</p>
+<h3 id="系统的选择"><a href="#系统的选择" class="headerlink" title="系统的选择"></a>系统的选择</h3><p>小米的刷机包一直很多，老牌简洁的Lineage OS，更接近原生的PE还有些我没见过的Omni，看了一圈下来选择了我用的最多而且有官方(Official)支持的Lineage OS，有什么问题更新起来也方便，求稳喵<br>官网下好TWRP，Lineage OS，OpenGAPPS，Magisk包，插好数据线一把梭之后傻眼了，小米要解锁<br><img src="/2019/02/14/lineage-os-15-on-mix2/a.jpg" alt><br>好在有个米粉同学，丢给他解了个锁，我们继续</p>
+<h3 id="刷机"><a href="#刷机" class="headerlink" title="刷机"></a>刷机</h3><p>首先测试下twrp有没有什么问题，先进入fastboot<br><code>fastboot boot twrp.img</code><br>测试没什么问题后<br><code>fastboot flash recovery twrp.img</code><br>进recovery双清选择刷机包，滑动开始！<br>然后就。。。翻车了<br>错误7(Error 7)<br><img src="/2019/02/14/lineage-os-15-on-mix2/001.jpeg" alt><br>再来一次，还是这样<br><img src="/2019/02/14/lineage-os-15-on-mix2/b1.jpeg" alt><br>然后开始找错，根据经验用twrp格式化一遍data和system之类的再试试，还是不行，于是就要依靠万能的搜索引擎了<br>有人说是底包问题，要换最新的底包。马上去MIUI官网下了个最新的开发版刷上再试一次，还是失败。<br>找了半天问题还是没解决，问题出在xiaomi.verify_trustzone上，有人说直接删了这行就能刷上了，可是，这不优雅<br><img src="/2019/02/14/lineage-os-15-on-mix2/b2.jpeg" alt><br>肯定有什么更优雅的方法解决的，lineage官网没有做特殊说明，更气的是，下了个魔趣刷上直接就开机了<br><img src="/2019/02/14/lineage-os-15-on-mix2/b3.jpeg" alt><br>去xda挨个帖子翻过去，看了看原帖<br><img src="/2019/02/14/lineage-os-15-on-mix2/002.jpeg" alt="002"><br>左看右看也没看出个啥来，这是出比有蹊跷。无意之中扫到一行文字<br><img src="/2019/02/14/lineage-os-15-on-mix2/003.jpeg" alt="003"><br>原帖要求我们的rom竟然是MIUI 8.4.19，这都9102年了，半年时间MIUI都出到11了，这玩意还能用吗<br>不知道从哪想出来个想法，别人都是底包版本过低，我是不是版本太高了。<br>借助搜索引擎，我找到了都快发霉的8.4.19的包<br><a href="http://bigota.d.miui.com/8.4.19/miui_MIMIX2Global_8.4.19_fa49b224" target="_blank" rel="noopener">miui_MIMIX2Global_8.4.19_fa49b22402_8.0.zip</a><br><code>SHA-1: 7ca74a5d7caac7b64429376742dfe320c202a783</code><br>下载地址写在上面，需要的自提<br>刷完这个包双清，再刷lineage os，顺利开机<br>剩下的就是装软件配框架什么的了，这次也算是蛮奇妙的一次体验，大部分人可能碰不到这么特殊的情况，写出来帮助一下跟我遇到同样问题的人</p>
+<p>各位，新年快乐呢喵～</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://RunianLee.github.io/2019/02/14/lineage-os-15-on-mix2/" data-id="ck1ks00a600012ts6jc1fwtuq" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Android/">Android</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/LineageOS/">LineageOS</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/01/01/hello-world/" class="article-date">
+  <time datetime="2017-12-31T16:00:00.000Z" itemprop="datePublished">2018-01-01</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/01/01/hello-world/">Hello World</a>
     </h1>
   
 
@@ -101,7 +236,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://RunianLee.github.io/2019/10/10/hello-world/" data-id="ck1klvf6g0000oqs6usqdatr6" class="article-share-link">Share</a>
+      <a data-url="https://RunianLee.github.io/2018/01/01/hello-world/" data-id="ck1ks00af00032ts6y5q75ovm" class="article-share-link">Share</a>
       
       
     </footer>
@@ -121,15 +256,29 @@
 
   
     
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Android/">Android</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/LineageOS/">LineageOS</a></li></ul>
+    </div>
+  </div>
+
 
   
     
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/Android/" style="font-size: 20px;">Android</a> <a href="/tags/LineageOS/" style="font-size: 10px;">LineageOS</a>
+    </div>
+  </div>
+
   
     
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/10/">October 2019</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/10/">October 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/02/">February 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/">January 2018</a></li></ul>
     </div>
   </div>
 
@@ -142,7 +291,19 @@
       <ul>
         
           <li>
-            <a href="/2019/10/10/hello-world/">Hello World</a>
+            <a href="/2019/10/10/lineage-os-15-to-16/">lineageos跨版本升级踩坑记录</a>
+          </li>
+        
+          <li>
+            <a href="/2019/02/26/Chinese-character-with-CJK-font/">“复”字变窄了？谈谈字体的那点事</a>
+          </li>
+        
+          <li>
+            <a href="/2019/02/14/lineage-os-15-on-mix2/">给小米MIX2刷lineage os与错误7解决</a>
+          </li>
+        
+          <li>
+            <a href="/2018/01/01/hello-world/">Hello World</a>
           </li>
         
       </ul>
